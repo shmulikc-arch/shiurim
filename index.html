@@ -7,8 +7,8 @@
 <meta name="description" content="שיעורי תורה מוקלטים של הרב יואב אקריש – להאזנה בבית ובדרך">
 <meta name="theme-color" content="#0b1628">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" href="icons/favicon.png" type="image/png">
-<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="נשמתא דאורייתא">
@@ -594,7 +594,7 @@ function updateNowPlaying(){
   $('#pFav').setAttribute('aria-pressed', favs.has(current.id));
   $('#pFav').style.color = favs.has(current.id) ? 'var(--gold)' : '';
   if ('mediaSession' in navigator){
-    const art = new URL('icons/icon-512.png', location.href).href;
+    const art = new URL('icon-512.png', location.href).href;
     navigator.mediaSession.metadata = new MediaMetadata({
       title: current.title + (current.yearLabel ? ' ' + current.yearLabel : ''),
       artist: current.rabbi, album: 'נשמתא דאורייתא · ' + current.folderName,
