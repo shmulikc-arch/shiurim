@@ -287,6 +287,7 @@ footer{color:var(--dim);text-align:center;font-size:.85rem;margin:36px 0 10px}
    ========================================================= */
 const CONFIG = {
   CATALOG_URL: '',
+  DRIVE_KEY: 'AIzaSyBnD0itBvTaxXyC6zS_X3c3ue7wLy86exM',
   PARSHA_API: 'https://www.hebcal.com/shabbat?cfg=json&geonameid=281184&M=on&lg=he'
 };
 
@@ -346,7 +347,7 @@ function sectionOf(order){
 function audioUrls(s){
   if (s.url) return [s.url];
   return [
-    'https://drive.google.com/uc?export=download&id=' + s.id,
+    'https://www.googleapis.com/drive/v3/files/' + s.id + '?alt=media&key=' + CONFIG.DRIVE_KEY,
     'https://drive.usercontent.google.com/download?id=' + s.id + '&export=download'
   ];
 }
