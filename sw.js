@@ -6,9 +6,9 @@ const SHELL = [
   './index.html',
   './manifest.webmanifest',
   './catalog.json',
-  './icons/icon-192.png',
-  './icons/icon-512.png',
-  './icons/favicon.png'
+  './icon-192.png',
+  './icon-512.png',
+  './favicon.png'
 ];
 
 self.addEventListener('install', (e) => {
@@ -28,10 +28,8 @@ self.addEventListener('fetch', (e) => {
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
 
-  // Let audio and range requests go straight to the network.
   if (req.headers.has('range') || req.destination === 'audio') return;
 
-  // Same-origin: network first (fresh catalog / app), fall back to cache.
   if (url.origin === self.location.origin) {
     e.respondWith(
       fetch(req)
@@ -47,7 +45,6 @@ self.addEventListener('fetch', (e) => {
     return;
   }
 
-  // Google Fonts: cache first.
   if (url.hostname.endsWith('fonts.googleapis.com') || url.hostname.endsWith('fonts.gstatic.com')) {
     e.respondWith(
       caches.match(req).then((hit) =>
