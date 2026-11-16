@@ -1,0 +1,12 @@
+{
+  "rabbis": [
+    { "id": "akrish", "name": "הרב יואב אקריש", "photo": "r-akrish.jpg",
+      "sources": [ { "root": "1uDd_lkq_ReRbJ1duOfgcKRdiK8K_W-4x", "lang": "he", "label": "שיעורים לפי פרשות ומועדים" } ] },
+    { "id": "slavaticki", "name": "הרב שבתי סלבטיצקי", "photo": "r-slavaticki.jpg",
+      "sources": [ { "root": "1eXgXaYFbWvE4vtN7t6QJMm76thHomGyL", "lang": "he", "label": "שיעורים לפי פרשות ומועדים" } ] },
+    { "id": "farkash", "name": "הרב אשר פרקש", "photo": "r-farkash.jpg",
+      "sources": [
+        { "root": "1FP4jMy3UzfoUpWBPb6pc99gc1W6nW7-s", "lang": "yi", "label": "שיעורים באידיש" },
+        { "root": "1Y2wuaMURVXQT5dQVYgVE6y02wfaXFqhx", "lang": "he", "label": "שיעורים בעברית" } ] }
+  ]
+}
