@@ -1,15 +1,17 @@
 // Service worker: keeps the app shell available offline.
 // Audio is never cached here – it streams straight from the storage.
-const VERSION = 'shiurim-v2';
+const VERSION = 'shiurim-v3';
 const SHELL = [
   './',
   './index.html',
   './manifest.webmanifest',
-  './catalog.json',
+  './library.json',
   './icon-192.png',
   './icon-512.png',
   './favicon.png',
-  './rabbi.jpg',
+  './r-akrish.jpg',
+  './r-slavaticki.jpg',
+  './r-farkash.jpg',
   './suez-one-hebrew-400-normal.woff2',
   './assistant-hebrew-400-normal.woff2',
   './assistant-hebrew-700-normal.woff2'
